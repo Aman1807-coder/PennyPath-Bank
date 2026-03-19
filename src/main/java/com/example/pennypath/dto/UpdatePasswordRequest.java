@@ -1,0 +1,14 @@
+package com.example.pennypath.dto;
+
+import jakarta.validation.constraints.NotBlank;
+import lombok.Data;
+
+@Data
+public class UpdatePasswordRequest {
+
+    @NotBlank(message = "Old Password is Required")
+    private String oldPassword;
+
+    @NotBlank(message = "New Password is Required")
+    private String newPassword;
+}
