@@ -1,5 +1,6 @@
 package com.example.pennypath.entity;
 
+import com.example.pennypath.enums.NotificationType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -25,7 +26,7 @@ public class Notification {
     private String body;
 
     @Enumerated(EnumType.STRING)
-    private String notificationType;
+    private NotificationType notificationType;
 
     @ManyToOne
     @JoinColumn(name = "user_id")

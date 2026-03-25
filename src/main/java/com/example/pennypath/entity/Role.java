@@ -21,5 +21,5 @@ public class Role {
 
     @Column(unique = true)
     @NotBlank(message = "Role name is required")
-    private String role;
+    private String name;
 }
